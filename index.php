@@ -3,7 +3,7 @@ function safely_add_stylesheet_to_admin() {
    wp_enqueue_style( 'prefix-style', plugins_url('hello-style.css', __FILE__) );
 }
 
-
+plugins_url( 'css/style.css', __FILE__ );
 
 add_action("admin_menu", "addMenu");
 
