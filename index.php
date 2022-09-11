@@ -1,6 +1,8 @@
 add_action( 'admin_enqueue_scripts', 'safely_add_stylesheet_to_admin' );
 function safely_add_stylesheet_to_admin() {
    wp_enqueue_style( 'prefix-style', plugins_url('hello-style.css', __FILE__) );
+   wp_enqueue_script('boot_js', plugins_url('inc/bootstrap.js',__FILE__ ));
+   wp_enqueue_script('ln_script', plugins_url('js/script.js', __FILE__), ['jquery'], false, true);
 }
 
 plugins_url( 'css/style.css', __FILE__ );
