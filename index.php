@@ -1,7 +1,7 @@
 admin_enqueue_scripts
 wp_enqueue_scripts
 init
-
+wp_head
 
 add_action( 'admin_enqueue_scripts', 'safely_add_stylesheet_to_admin' );
 function safely_add_stylesheet_to_admin() {
